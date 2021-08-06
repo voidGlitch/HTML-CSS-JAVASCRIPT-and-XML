@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <body>
+            <div>
+        <p>Bring your mouse inside the division to see the result:</p>
+        <img id="img1" src="marvel.png" onmouseover="over()" onmouseout="out()" src="marvel.png" width="300" onclick="enlargeImg()" >
+        </div>
+    <script type="text/javascript">
+ 
+    function over() {
+        document.getElementById("img1").src ="marvel.png" ;
+    }
+    function out() {
+        document.getElementById("img1").src ="marvel.png";
+        document.getElementById("img1").style.width= "100";
+    }
+    function enlargeImg() {
+                document.getElementById("img1").style.width = "60%";
+                document.getElementById("img1").style.height = "auto";
+                document.getElementById("img1").style.transition = "width 0.5s ease";
+            }
+    </script>
+    </body>
+    </head>
+    </html>

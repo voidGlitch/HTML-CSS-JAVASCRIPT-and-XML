@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title> mouseover</title>
+<body style="text-align: center; padding-top: 200px; background-image: linear-gradient(to top ,orange,yellow);">
+    <p> Pass your mouse over the image to see the result:</p>
+<img id="img1" src="marvel.png" onmouseover="over()" onmouseout="out()" width="300">
+<br>
+<br>
+<script type="text/javascript">
+  
+  img=document.getElementById("img1");
+
+  function over(){
+      img.src="marvel.png";
+      img.style.width="100";
+  }
+   
+  function out(){
+      img.src="marvel.png";
+      img.style.width="300";
+            }
+</script>
+</body>
+</head>
+</html>

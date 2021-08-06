@@ -1,0 +1,11 @@
+body{
+    margin-top: 50px;
+    margin-left: 40px;
+    background-image: linear-gradient(to right,red,white);
+    /* background-image: url("gob.gif"); */
+}
+h1{
+    background-color: aquamarine;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS';
+}

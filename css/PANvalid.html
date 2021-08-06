@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Validation on PAN</title>
+    </head>
+  
+    <body >
+<style>
+    body{
+      padding-top: 100px;
+        background-image: url("spider7.jpg");
+    }
+    input.p{
+       color: red;   
+       }
+       div{
+        border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 500px;
+}
+    label.e{
+      color: black; 
+    }
+</style>
+<div class="c">
+<form name="form1">
+    <label class= "e">Enter name</label>
+    <input type="text" id ="name"> 
+    <br>
+    <label>Father's name:</label>
+    <input type="text" id ="Fname"> 
+    <br>
+    <label>E-mail:</label>
+    <input type="email" id ="email"> 
+    <br>
+    <label>PAN NUMBER:</label>
+    <input type="text" name="pan" class="p"> 
+    <br>
+
+        <label>Gender:</label>
+        <label for="gender-male">Male</label>
+        <input  type="radio" name="gender-choice" value="choice-1">
+        <label for="gender-female">Female</label>
+        <input  type="radio" name="gender-choice" value="choice-2">
+        <label for="gender-other">Other</label>
+        <input  type="radio" name="gender-choice" value="choice-3">
+    
+    <br>
+   
+    <input type="button" name="submit" value="submit" onclick="validatepan()">
+</form>
+</div>
+<script>
+
+function validatepan(){
+    var user = document.form1.pan.value;
+    var ok = /^([A-Z]){5}([0-9]){4}([A-Z]){1}$/ ;
+if (user == "")
+{
+    alert("Opps! something went wrong .Try again!");
+}
+else if (user.length != 10 ){
+    alert("Pan number should have atleast 10 digits");
+}
+else if(user.match(ok)){
+    alert("This is valid pan Number");
+}
+else
+{
+alert(user + " This is wrong pan Number");
+}
+}
+</script>
+    </body>
+</html>

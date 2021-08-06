@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body style="text-align: center; padding-left: 15px ; padding-right: 80px; padding-top: 100px; background-image:linear-gradient(to right,rgba(255, 217, 0, 0.897),orange)">
+    <script>
+      function add() {
+        var a = Number(document.getElementById("num1").value);
+        var b = Number(document.getElementById("num2").value);
+        console.log(a, b);
+        var add = a + b;
+        alert("sum = " + add);
+      }
+      function sub() {
+        var a = Number(document.getElementById("num1").value);
+        var b = Number(document.getElementById("num2").value);
+        console.log(a, b);
+        var sub;
+        sub = a - b;
+        // document.getElementById("subs").innerHTML= sub;
+        alert("subtraction = " + sub);
+      }
+      function multi(a, b) {
+        var multi;
+        multi = a * b;
+        alert("multipliction =" + multi);
+      }
+      function div(a, b) {
+        var div;
+        div = a / b;
+        alert("division " + div);
+      }
+    </script>
+    <form name="myform">
+      <br>
+      <br>
+      <br>
+      <br>
+      <label>Enter first number</label>
+      <input type="number" id="num1" />
+      <br />
+      <label>Enter second number</label>
+      <input type="number" id="num2" />
+      <br />
+      <br>
+      <button onclick="return add()">Addition  </button>
+      <button onclick="return sub()">Subtraction  </button>
+      <button
+        onclick="return multi(document.getElementById('num1').value, document.getElementById('num2').value)"
+      >
+        multiplication
+      </button>
+      <button
+        onclick="return div(document.getElementById('num1').value, document.getElementById('num2').value)"
+      >
+        division
+      </button>
+      <p id="subs"></p>
+    </form>
+  </body>
+</html>

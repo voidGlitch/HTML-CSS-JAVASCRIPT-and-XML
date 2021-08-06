@@ -1,0 +1,27 @@
+body{
+    color: #fdafafee;
+    background-color: rgb(218, 15, 15);
+}
+h1{
+    font-family: 'Lucida Grande';
+}
+.reg{
+    font-family: "Lucida Console";
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-radius: 4px;
+  }
+  input[type=email] {
+      width: 20%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    border-radius: 4px;
+
+  }

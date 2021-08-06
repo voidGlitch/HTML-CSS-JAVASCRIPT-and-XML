@@ -1,0 +1,32 @@
+<?xml version = "1.0"?>
+<!-- Q25.xml in DTD -->
+<!DOCTYPE students SYSTEM "students.dtd">
+<students>
+<student>
+<name>
+<firstname> Aryan</firstname>
+<lastname> Kumar </lastname>
+</name>
+<address>
+<street> B-95 Model town</street>
+<city> Delhi </city>
+<email> aryan@gmail.com</email>
+<phone> 8956215367 </phone>
+<Enrollment>02524302019</Enrollment>
+</address>
+</student>
+
+<student>
+<name>
+<firstname> Rahul</firstname>
+<lastname> Sharma </lastname>
+</name>
+<address>
+<street> N-62 complex apartment </street>
+<city> Rohini </city>
+<email> rahul@gmail.com</email>
+<phone> 9658421365 </phone>
+<Enrollment>02624302019</Enrollment>
+</address>
+</student>
+</students>

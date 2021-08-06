@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Image slider</title>
+</head>
+<body>
+<h1>THIS IS AN IMAGE SLIDER </h1>
+<img src="spider1.jpg" id ="image1"alt="img" height="500px" width="400px">
+<!-- <img src="one.jpg" id ="image1"alt="img" height="500px" width="400px"> -->
+<br>
+<br>
+<center>
+<button onclick="next()">NEXT</button>
+<button onclick="prev()">PREVIOUS</button>
+</center>
+
+<script>
+    var images = ["spider1.jpg","spider2.jpg","spider3.jpg","spider4.png","spider5.jpg","spider6.jpg","spider7.jpg"];
+    // var images = ["one.jpg","two.png",'three.png',"four.png","five.png","six.png","seven.png"];
+    var index=1;
+    var previndex = images.length -1;
+ function next(){
+    
+
+    document.getElementById("image1").src= images[index];
+    index = index + 1;
+    if(index > 6){
+        return index = 0 ;
+    }  
+ }
+
+function prev(){
+    if(previndex == 0){
+      previndex = images.length -1; 
+      
+  }
+    document.getElementById("image1").src= images[previndex];
+    previndex = previndex - 1;
+
+  if(previndex == -1){
+    document.write("something is error");
+  }
+  
+ }
+
+</script>
+
+<style>
+body{
+    background-image: linear-gradient(to right,rgb(255, 60, 0),orange,rgb(255, 230, 0));
+}
+#image1{
+  
+    padding-left: 500px;
+}
+h1{
+  font-family: 'Lucida Sans';
+  border: 2px solid red; 
+  border-radius: 20px;
+   display:flex;
+justify-content: center;
+align-items: center;
+    box-shadow: 0 0 70px #301f06;
+}
+</style>
+</body>
+</html>

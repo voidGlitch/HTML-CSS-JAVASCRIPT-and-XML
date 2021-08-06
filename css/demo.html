@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<HEAD>
+   <TITLE> REGISTRATION FORM</TITLE>
+</HEAD>
+<BODY>
+<style>
+    body{
+    color: #fdafafee;
+    background-color: rgb(218, 15, 15);
+}
+h1{
+    font-family: 'Lucida Grande';
+}
+.reg{
+    font-family: "Lucida Console";
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-radius: 4px;
+  }
+  input[type=email] {
+      width: 20%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    border-radius: 4px;
+
+  }
+</style>
+
+
+   <script>
+      function validateform() {
+        var firstname = document.myform.name.value;
+        // variable name should same .
+        // as here you are saving value in name and in condition you are checking firstname
+        
+        var password = document.myform.password.value;
+
+        // donot put if else ladder if you want to check all the conditions.
+        if (firstname == null || firstname == "") {
+        alert("Name can't be blank");
+        return false;
+        }
+        if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+        }
+      }
+    function ValidateEmail(inputText)
+{
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid email address!");
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+return false;
+}
+}
+      
+   </script>
+   <h1>
+      <b>Registration form</b>
+      <hr>
+   </h1>
+   <p class="reg" >Fill up this is a Registration form</p>
+   <div id="reg-form">
+      <form  name="myform" onsubmit="return validateform()">
+         <label for="name"><b>First name</b>:</label>
+         <input type="text" name="name" required> <!-- Put Required here if you want this field to be non-empty or mandatory-->
+         <div>
+            <label for="last name"><b>Last name</b>:</label>
+            <input type="text" name="last name" placeholder="">
+         </div>
+         <div>
+            <b>Gender:</b>
+            <label for="gender-male">Male</label>
+            <input  type="radio" name="gender-choice" value="choice-1">
+            <label for="gender-female">Female</label>
+            <input  type="radio" name="gender-choice" value="choice-2">
+            <label for="gender-other">Other</label>
+            <input  type="radio" name="gender-choice" value="choice-3">
+         </div>
+         <div>
+            <label for="email"><b>Email:</b></label>
+            <input type="email" name="first name" placeholder="xyz@gmail.com">
+            <label for="password"><b>Password</b></label>
+            <input type="password" name="password" minlength="6"> <!-- Put minlength to the minimum number of characters you want-->
+         </div>
+         <div>
+            <label for="month"><b>Birthday</b>:</label>
+            <select name="month">
+               <option value="0" selected disabled>month</option>
+               <option value="jan">january </option>
+               <option value="feb">february</option>
+               <option value="mar">march</option>
+               <option value="apr">april</option>
+               <option value="may">may</option>
+               <option value="jun">june</option>
+               <option value="jul">july</option>
+               <option value="aug">august</option>
+               <option value="sept">september</option>
+               <option value="oct">october</option>
+               <option value="nov">november</option>
+               <option value="dec"> december</option>
+            </select>
+            <label for="date"></label>
+            <select name="date">
+               <option value="0" selected disabled>date</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+               <option value="21">21</option>
+               <option value="22">22</option>
+               <option value="23">23</option>
+               <option value="24">24</option>
+               <option value="25">25</option>
+               <option value="26">26</option>
+               <option value="27">27</option>
+               <option value="28">28</option>
+               <option value="29">29</option>
+               <option value="30">30</option>
+               <option value="31">31</option>
+            </select>
+            <label for="year"></label>
+            <select name="year">
+               <option value ="0" selected disabled>year</option>
+               <option value="1991">1991</option>
+               <option value="1992">1992</option>
+               <option value="1993">1993</option>
+               <option value="1994">1994</option>
+               <option value="1995">1995</option>
+               <option value="1996">1996</option>
+               <option value="1997">1997</option>
+               <option value="1998">1998</option>
+               <option value="1999">1999</option>
+               <option value="2000">2000</option>
+               <option value="2001">2001</option>
+               <option value="2002">2002</option>
+               <option value="2003">2003</option>
+               <option value="2004">2004</option>
+               <option value="2005">2005</option>
+               <option value="2006">2006</option>
+               <option value="2007">2007</option>
+            </select>
+         </div>
+         <label for="agree"><b>I agree all the above term and condition</b></label>
+         <input type="checkbox" name="agree"><br>
+         Feedback:<textarea name="Feedback" cols="50" rows="4"></textarea>
+         <div>
+            <input type="submit" value="SUBMIT" onclick="ValidateEmail(document.form1.text1)" >
+         </div>
+      </form>
+   </div>
+</BODY>
+</HTML>

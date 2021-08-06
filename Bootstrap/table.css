@@ -1,0 +1,21 @@
+body{
+        background-image: linear-gradient(rgb(255, 0, 106),rgb(0, 225, 255));
+        background-color: rgb(255, 0, 119);
+}
+table,th,td{
+   border: 1px solid black;
+   width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+table{
+    border-collapse: collapse;
+    background-color: tomato;
+    color: black;
+    text-align: center;
+    }
+    .center{
+            margin-top: 200px;
+        margin-left: 350px;
+        margin-right: 200px;
+    }

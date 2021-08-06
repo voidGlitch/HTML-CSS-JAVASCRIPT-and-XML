@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>sorting </title>
+    </head>
+    <body style="text-align: center; padding-top: 190px; background-image: linear-gradient(to top,green,white,orange);">
+
+<label>Enter any number</label>
+<input id="a" type="text">
+<br>
+<button onclick="add()">submit</button><br>
+<p id="b" >Array : </p>
+<button onclick="sort()">sort</button>
+<h2 style="color: blue;">Sorted Numbers</h2>
+<h2 id="out"></h2>
+<script>
+    
+    var i= 0;
+    var na= [];
+    var size = parseInt(document.getElementById("num").Value);
+    function add()
+    {       //adding the elements to the array
+        document.getElementById("b").innerHTML= "Array :"
+        na[i]=document.getElementById("a").value;
+        i++;
+        // proving a blank space for the next element
+        document.getElementById("a").value ="";
+        // displaying the elements
+        document.getElementById("b").innerHTML += na;
+    }
+    function sort()  
+    {
+        // document.getElementById("b").innerHTML += na;
+        na.sort();
+        document.getElementById("out").innerHTML = na;
+    }
+</script>
+    </body>
+</html>

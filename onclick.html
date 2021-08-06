@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div style="text-align: center; 
+                    margin-top: 10%;">
+            <img id="img1" src="https://moneyinc.com/wp-content/uploads/2020/08/Marvel.jpg" onclick="enlargeImg()" />
+            <br/>
+            <br/>
+            <br/>
+            <button onclick="resetImg()">Reset
+          </button>
+        </div>
+        <script>
+            img = document.getElementById("img1");
+            function enlargeImg() {
+                img.style.width = "60%";
+                img.style.height = "auto";
+                img.style.transition = "width 0.5s ease";
+            }
+            function resetImg() {
+                img.style.width = "40%";
+                img.style.height = "auto";
+                img.style.transition = "width 0.5s ease";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title> Myself</title>
+	<link rel="stylesheet" href="8external.css">
+	<script>
+		function validateform() {
+		  var firstname = document.myform.name.value;
+		  // variable name should same .
+		  // as here you are saving value in name and in condition you are checking firstname
+		  
+		  var password = document.myform.password.value;
+  
+		  // donot put if else ladder if you want to check all the conditions.
+		  if (firstname == null || firstname == "") {
+		  alert("Name can't be blank");
+		  return false;
+		  }
+		  if (password.length < 6) {
+		  alert("roll no. must contain at least 6 characters long.");
+		  return false;
+		  }
+		}
+		
+	 </script>
+</head>
+<body>
+<h1>PERSONAL DETAILS</h1>
+	<form name="myform" onsubmit="return validateform()">
+		<label for="name"><strong>Name of the student </strong></label>
+		<input type="text" size="40" maxlength="200" name="name" required/>
+		<br>
+		<br>
+		<label for="password">
+		Roll no:</label>
+		 <input type="text" size="40" maxlength="200" name="password" minlength="6">
+	
+		<BR>
+			<br>
+		Email ID:<input type="Email" size="40" maxlength="200" name="xxxxx@xxxxx"/>
+		<BR>
+			<br>
+			<div>
+				<b>Gender  :</b>
+				<input  type="radio" name="gender-choice" value="choice-1">
+				<label for="gender-male">Male</label>
+				<input  type="radio" name="gender-choice" value="choice-2">
+				<label for="gender-female">Female</label>
+				<input  type="radio" name="gender-choice" value="choice-3">
+				<label for="gender-other">Other</label>
+			
+			 </div>
+			 <br>
+			 <br>
+			 <div>
+				<b>COURSE:</b>
+				<input  type="radio" name="Course-choice" value="choice-1">
+				<label for="BBA">BBA</label>
+				<input  type="radio" name="Course-choice" value="choice-2">
+				<label for="BCA">BCA</label>
+				<input  type="radio" name="Course-choice" value="choice-3">
+				<label for="B.com">B.COM</label>
+				<input  type="radio" name="Course-choice" value="choice-4">
+				<label for="Other">B.ED</label>
+				
+			 </div>
+			 <button>submit</button>
+		</strong>
+	</form>
+</body>
+</html>	

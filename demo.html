@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+  <title>Windows 10 / 8</title>
+</head>
+<body>
+<!-- <img src=""> -->
+<p style="margin: 0 0 150px;">Welcome to our login page</p>
+<div onclick="down64()" class="download" style="margin: 10px; width: 250px">
+  <svg height="700px" width="700px" viewBox="0 0 512 521" version="1.1" id="windows">
+    <path d="M0,67.048l207.238-27.137v197.803H0V67.048z M207.238,459.904L0,432.762V262.096h207.238V459.904z M512,0v237.714H231.619  v-201L512,0z M512,499.81l-280.381-36.714v-201H512V499.81z"></path>
+  </svg>
+  <span>Win10_64-bit.exe</span>
+</div>
+<div onclick="down64zip()" class="download" style="margin: 10px; width: 250px">
+  <svg height="700px" width="700px" viewBox="0 0 512 499.81" version="1.1" id="windows">
+    <path d="M0,67.048l207.238-27.137v197.803H0V67.048z M207.238,459.904L0,432.762V262.096h207.238V459.904z M512,0v237.714H231.619  v-201L512,0z M512,499.81l-280.381-36.714v-201H512V499.81z"></path>
+  </svg>
+  <span>Win10_64-bit.zip</span>
+</div>
+<div onclick="down32()" class="download" style="margin: 10px; width: 250px">
+  <svg height="700px" width="700px" viewBox="0 0 512 499.81" version="1.1" id="windows">
+    <path d="M0,67.048l207.238-27.137v197.803H0V67.048z M207.238,459.904L0,432.762V262.096h207.238V459.904z M512,0v237.714H231.619  v-201L512,0z M512,499.81l-280.381-36.714v-201H512V499.81z"></path>
+  </svg>
+  <span>Win10_32-bit.exe</span>
+</div>
+<div onclick="down32zip()" class="download" style="margin: 10px; width: 250px">
+  <svg height="700px" width="700px" viewBox="0 0 512 499.81" version="1.1" id="windows">
+    <path d="M0,67.048l207.238-27.137v197.803H0V67.048z M207.238,459.904L0,432.762V262.096h207.238V459.904z M512,0v237.714H231.619  v-201L512,0z M512,499.81l-280.381-36.714v-201H512V499.81z"></path>
+  </svg>
+  <span>Win10_32-bit.zip</span>
+</div>
+<footer>©FileCloud | CodeLathe Technologies Inc</footer>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var win64 = "";
+           var win64zip = "";
+        var win32 = "";
+        var win32zip = "";
+           $.ajax({
+                url: "downloads.json",
+                success: function(json){
+                    win64 = json.win64;
+                    win64zip = json.win64zip;
+                    win32 = json.win32;
+                    win32zip = json.win32zip;
+                }
+           });
+        function down64(){
+            location.href= "/uploads/windows/"+win64;
+        }
+        function down64zip(){
+            location.href= "/uploads/windows/"+win64zip;
+        }
+        function down32(){
+            location.href= "/uploads/windows/"+win32;
+        }
+        function down32zip(){
+            location.href= "/uploads/windows/"+win32zip;
+        }
+    </script>
